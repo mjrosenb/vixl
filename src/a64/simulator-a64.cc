@@ -489,14 +489,14 @@ void Simulator::PrintProcessorState() {
 // Visitors---------------------------------------------------------------------
 
 void Simulator::VisitUnimplemented(Instruction* instr) {
-  printf("Unimplemented instruction at 0x%p: 0x%08" PRIx32 "\n",
+  printf("Unimplemented instruction at %p: 0x%08" PRIx32 "\n",
          reinterpret_cast<void*>(instr), instr->InstructionBits());
   VIXL_UNIMPLEMENTED();
 }
 
 
 void Simulator::VisitUnallocated(Instruction* instr) {
-  printf("Unallocated instruction at 0x%p: 0x%08" PRIx32 "\n",
+  printf("Unallocated instruction at %p: 0x%08" PRIx32 "\n",
          reinterpret_cast<void*>(instr), instr->InstructionBits());
   VIXL_UNIMPLEMENTED();
 }
